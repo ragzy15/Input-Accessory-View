@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7k7-ip-ABZ" customClass="InputAccessoryView" customModule="InputAccessory" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cff-X0-Cqj">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bB-b6-Pyd">
+                            <rect key="frame" x="331" y="12" width="36" height="30"/>
+                            <state key="normal" title="Send"/>
+                            <connections>
+                                <action selector="sendButtonPressed:" destination="7k7-ip-ABZ" eventType="touchUpInside" id="G6X-Zx-tWU"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sUH-aB-Fvs" customClass="CustomUITextView" customModule="InputAccessory" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8" width="315" height="34"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter Text..."/>
+                            </userDefinedRuntimeAttributes>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="1bB-b6-Pyd" firstAttribute="leading" secondItem="sUH-aB-Fvs" secondAttribute="trailing" constant="8" id="FDc-Hb-9aO"/>
+                        <constraint firstItem="sUH-aB-Fvs" firstAttribute="top" secondItem="Tew-XV-MTA" secondAttribute="top" constant="8" id="Jlb-tT-ZuG"/>
+                        <constraint firstItem="sUH-aB-Fvs" firstAttribute="leading" secondItem="Tew-XV-MTA" secondAttribute="leading" constant="8" id="Nx4-BA-88S"/>
+                        <constraint firstItem="Tew-XV-MTA" firstAttribute="bottom" secondItem="sUH-aB-Fvs" secondAttribute="bottom" constant="8" id="RF2-7F-vgS"/>
+                        <constraint firstItem="Tew-XV-MTA" firstAttribute="trailing" secondItem="1bB-b6-Pyd" secondAttribute="trailing" constant="8" id="RU9-wD-LOh"/>
+                        <constraint firstItem="Tew-XV-MTA" firstAttribute="bottom" secondItem="1bB-b6-Pyd" secondAttribute="bottom" constant="8" id="XLI-CQ-ynn"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Tew-XV-MTA"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="cff-X0-Cqj" firstAttribute="leading" secondItem="7k7-ip-ABZ" secondAttribute="leading" id="4Y4-wU-xhX"/>
+                <constraint firstAttribute="trailing" secondItem="cff-X0-Cqj" secondAttribute="trailing" id="FYh-E9-eHU"/>
+                <constraint firstItem="cff-X0-Cqj" firstAttribute="top" secondItem="7k7-ip-ABZ" secondAttribute="top" id="mbn-dB-7sg"/>
+                <constraint firstAttribute="bottom" secondItem="cff-X0-Cqj" secondAttribute="bottom" id="or4-fW-XuB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="sendButton" destination="1bB-b6-Pyd" id="9zD-S5-Cmx"/>
+                <outlet property="textView" destination="sUH-aB-Fvs" id="Srh-3l-KQ7"/>
+            </connections>
+            <point key="canvasLocation" x="194" y="-215"/>
+        </view>
+    </objects>
+</document>
